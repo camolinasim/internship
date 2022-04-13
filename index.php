@@ -25,6 +25,35 @@
 	<script src="global_assets/js/demo_pages/form_select2.js"></script>
 	<!-- /theme JS files -->
 
+	<style>
+		.container {
+		  width: 100px;
+		  height: 100px;
+		  position: relative;
+		}
+		.navi,
+		.infoi {
+		  width: 100%;
+		  height: 100%;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		}
+		.infoi {
+		  z-index: 10;
+		}
+
+		.parent {
+			display: flex;
+			align-items: center;
+			}
+			.child {
+			width: 100px;
+			height: 100px;
+			}
+
+	</style>
+
 </head>
 
 <body>
@@ -41,30 +70,24 @@
 			<!-- City of El Paso Picture -->
 			<div class="content pt0">
 							<!-- Form inputs -->
-							<div class="card">
+							<div class="card parent">
 						<div class="card-header">
 						<div>
 							<img src="pension-logo-02.svg" alt="Logo" height="150px" style="max-width: 100%">
-								<h3 class="card-title">&#160;&#160;&#160;&#160;CEPERT Retirement Estimate Calculator</h3>
+								<h3 class="card-title">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CEPERT Retirement Estimate Calculator</h3>
 						</div>
 						</div>
 
-			<!-- Inner content -->
-			<div class="content-inner">
+			
 
-
-				<!-- Content area -->
-				<div class="content pt-0">
-					<form action="#">
 					<!-- Select2 selects -->
-					<div class="mb-3">
-					<div class="row">
 						<div class="col-lg-6">
+						<form action="#">
+
 							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title">&#160;Participation Date</h5>
-								</div>
 								<div class="card-body">
+								<h5 class="card-title">&#160;Participation Date</h5>
+
 									<div class="form-group">
 										<select class="form-control select" data-fouc>
 											<optgroup label="">
@@ -75,9 +98,9 @@
 					<!-- Service Time Input -->
 					<fieldset class="mb-3"><br>
 
-									<div class="form-group row">
-										<h5 class="card-title">&#160;&#160;&#160;&#160;Service Time</h5>
-										<div class="col-lg-10 input-group">
+									<div class="form-group">
+										<h5  class="card-title">Service Time</h5>
+										<div class=" input-group">
 											<input type="number" class="form-control font-weight-light" placeholder="Years (must be a number)">
 											<span class="input-group-addon">__</span>
 											<input type="number" class="form-control font-weight-light" placeholder="Months (must be a number)">
@@ -86,25 +109,15 @@
 					<!--/Service Time Input -->
 
 
-									<div class="form-group row">
-										<label class="col-form-label col-lg-2">Monthly Salary</label>
-										<div class="col-lg-10">
-											<input type="number" class="form-control font-weight-light" placeholder="Salary (must be a number)">
-										</div>
-									</div>   
+										<h5  class="card-title">Monthly Salary</h5>
+											<input type="number" class="form-control font-weight-light" placeholder="Salary (must be a number)"><br>
 
-									<div class="form-group row">
-										<label class="col-form-label col-lg-2">Age at Retirement</label>
-										<div class="col-lg-10">
-											<input type="number" class="form-control font-weight-light" placeholder="Salary (must be a number)">
-										</div>
-									</div> 
+										<h5  class="card-title">Age at Retirement</h5>
+											<input type="number" class="form-control font-weight-light" placeholder="Age (must be a number)">
 				</form>  
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
 					<!-- /select2 advanced -->   
 				   
 
@@ -112,16 +125,10 @@
 				<!-- /content area -->
 
 
-				
-
-			</div>
-			<!-- /inner content -->
-
 		</div>
 		<!-- /main content -->
 
-	</div>
-	<!-- /page content -->
+
 
 </body>
 </html>
