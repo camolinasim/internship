@@ -56,13 +56,7 @@
 
 </head>
 
-<body>
-
-
-
-	<!-- Page content -->
-	<div class="page-content">
-
+<body  style="overflow-y:scroll;">
 
 
 		<!-- Main content -->
@@ -74,7 +68,7 @@
 						<div class="card-header">
 						<div>
 							<img src="pension-logo-02.svg" alt="Logo" height="150px" style="max-width: 100%">
-								<h3 class="card-title">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CEPERT Retirement Estimate Calculator</h3>
+								<h3 class="card-title  text-center">CEPERT Retirement Estimate Calculator</h3>
 						</div>
 						</div>
 
@@ -85,7 +79,7 @@
 						<form action="#">
 
 							<div class="card">
-								<div class="card-body">
+								<div class="card-body"  style="overflow-y:auto;">
 								<h5 class="card-title">&#160;Participation Date</h5>
 
 									<div class="form-group">
@@ -108,15 +102,38 @@
 									</div>
 					<!--/Service Time Input -->
 
-
+										<!-- monthly salary input -->
 										<h5  class="card-title">Monthly Salary</h5>
 											<input type="number" class="form-control font-weight-light" placeholder="Salary (must be a number)"><br>
+										<!-- /monthly salary input -->
 
+										<!-- age at retirement input -->
 										<h5  class="card-title">Age at Retirement</h5>
 											<input type="number" class="form-control font-weight-light" placeholder="Age (must be a number)">
-				</form>  
+				    					<!-- age at retirement input -->
+
+				    						<!-- radio buttons -->
+										<h5  class="card-title">Marital Status</h5>
+
+										<div class="custom-control custom-radio mb-2">
+											<input type="radio" class="custom-control-input" name="cr-l" id="cr_l_s_s" checked>
+											<label class="custom-control-label" for="cr_l_s_s">Single</label>
+										</div>
+
+										<div class="custom-control custom-radio mb-3">
+											<input type="radio" class="custom-control-input" name="cr-l" id="cr_l_s_u">
+											<label class="custom-control-label" for="cr_l_s_u">Married</label>
+										</div>
+										<!-- /radio buttons -->
+
+										<!-- age at retirement input -->
+										<h5  class="card-title">Spouse's Age at Retirement</h5>
+											<input type="number" class="form-control font-weight-light" placeholder="Spouse's Age (must be a number)"><br>
+										<!-- /age at retirement input -->	
+									 
+										</div>
 									</div>
-								</div>
+								</form> 
 							</div>
 					<!-- /select2 advanced -->   
 				   
