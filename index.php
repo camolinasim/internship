@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+	<title>Pension Calculator</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -25,34 +25,13 @@
 	<script src="global_assets/js/demo_pages/form_select2.js"></script>
 	<!-- /theme JS files -->
 
-	<style>
-		.container {
-		  width: 100px;
-		  height: 100px;
-		  position: relative;
-		}
-		.navi,
-		.infoi {
-		  width: 100%;
-		  height: 100%;
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		}
-		.infoi {
-		  z-index: 10;
-		}
 
-		.parent {
-			display: flex;
-			align-items: center;
-			}
-			.child {
-			width: 100px;
-			height: 100px;
-			}
 
-	</style>
+	<!-- css required to center items -->
+	<link rel="stylesheet" href="center.css">
+
+
+
 
 </head>
 
@@ -69,6 +48,7 @@
 						<div>
 							<img src="pension-logo-02.svg" alt="Logo" height="150px" style="max-width: 100%">
 								<h3 class="card-title  text-center">CEPERT Retirement Estimate Calculator</h3>
+							<div class="text-center" id="status_area"></div>
 						</div>
 						</div>
 
@@ -170,30 +150,9 @@
 		</div>
 		<!-- /main content -->
 
-		<script>
-			//don't allow the user to enter anything other than a number
-				{
-				const
-				intRx = /\d/,
-				integerChange = (event) => {
-					if (
-					(event.key.length > 1) ||
-					( (event.key === "-") && (!event.currentTarget.value.length) ) ||
-					intRx.test(event.key)
-					) return; 
-					let target = event.currentTarget.id;
-					console.log(target)
-					$("#"+String(target)).fadeTo(100, 0.3, function() { $(this).fadeTo(500, 1.0); });
-					event.preventDefault();
-				};
-				for (let input of document.querySelectorAll(
-				'input[type="number"][step="1"]'
-				)) input.addEventListener("keydown", integerChange);
 
-				}
-		</script>
-
-
-
+	<!-- input validation -->
+	<script src="only_whole_numbers.js"></script>
+	<!-- /input validation -->
 </body>
 </html>
