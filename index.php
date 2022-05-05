@@ -83,7 +83,7 @@
 
 										<!-- monthly salary input -->
 										<h5 class="card-title">Monthly Salary</h5>
-											<input id="monthly_salary"name="monthly_salary" type="number" min="1" step="1" pattern="^[-\d]\d*$" class="form-control font-weight-light" placeholder="Salary (must be a whole number)"><br>
+											<input id="monthly_salary"name="monthly_salary" type="number" min="1" step="1" pattern="[1-9]\d*" class="form-control font-weight-light" placeholder="Salary (must be a whole number)"><br>
 										<!-- /monthly salary input -->
 
 										<!-- age at retirement input -->
@@ -108,9 +108,12 @@
 										<!-- /radio buttons -->
 
 										<!-- age at retirement input -->
+										<div id="married_menu">
 										<h5  class="card-title">Spouse's Age at Retirement</h5>
 											<input id="spouse_age_at_retirement" name="spouse_age_at_retirement" type="number" pattern="^[-\d]\d*$" min="1" step="1" class="form-control font-weight-light" placeholder="Spouse's Age (must be a whole number)"><br>
+
 										<!-- /age at retirement input -->	
+
 
 										<!-- radio buttons (optional settlement) -->
 										<h5 class="card-title">Optional Settlement</h5>
@@ -136,10 +139,11 @@
 
 											</div>
 										</div>
-										<input type="submit">
+									</div>
+								<input type="submit">
 
-								</form> 
-							</div>
+							</form> 
+						</div>
 					<!-- /select2 advanced -->   
 				   
 
@@ -154,5 +158,10 @@
 	<!-- input validation -->
 	<script src="only_whole_numbers.js"></script>
 	<!-- /input validation -->
+
+	<script src="show_married_options_on_radio_click.js"></script>
+
+
+
 </body>
 </html>

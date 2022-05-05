@@ -7,7 +7,7 @@
 
 			if (
 			(event.key.length > 1) ||
-			( (event.key === "-") && (!event.currentTarget.value.length) ) ||
+			( (event.key == "-") && (!event.currentTarget.value.length) ) ||
 			intRx.test(event.key)
 			) return; 
 			let target = event.currentTarget.id;
