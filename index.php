@@ -46,7 +46,7 @@
 						<div class="card-header">
 						<div>
 							<img src="pension-logo-02.svg" alt="Logo" height="150px" style="max-width: 100%">
-								<h3 class="card-title  text-center">CEPERT Retirement Estimate Calculator</h3>
+								<h3 class="card-title  text-center">CEPERT Retirement Estimate Calculator</h3><br>
 							<div class="text-center" id="status_area"></div>
 						</div>
 						</div>
@@ -74,21 +74,21 @@
 									<div class="form-group">
 										<h5  class="card-title">Service Time</h5>
 										<div class=" input-group">
-											<input id="service_time" name="service_time" type="number" min="1" step="1" pattern="^[-/d]/d*$" class="form-control font-weight-light" placeholder="Years (must be a whole number)">
+											<input id="service_time" name="service_time" type="number" min="10" max="100" step="1" required="required" class="form-control font-weight-light" placeholder="Years (must be a whole number)">
 											<span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-											<input id="months" name="months" type="number" min="1" step="1" pattern="^[-\d]\d*$" class="form-control font-weight-light" placeholder="Months (must be a whole number)">
+											<input id="months" name="months" type="number" min="0" max="12" step="1" required="required" class="form-control font-weight-light" placeholder="Months (must be a whole number)">
 										</div>
 									</div>
 					<!--/Service Time Input -->
 
 										<!-- monthly salary input -->
 										<h5 class="card-title">Monthly Salary</h5>
-											<input id="monthly_salary"name="monthly_salary" type="number" min="1" step="1" pattern="[1-9]\d*" class="form-control font-weight-light" placeholder="Salary (must be a whole number)"><br>
+											<input id="monthly_salary"name="monthly_salary" type="number" min="1300" max="1000000000" step="1" required="required" class="form-control font-weight-light" placeholder="Salary (must be a whole number)"><br>
 										<!-- /monthly salary input -->
 
 										<!-- age at retirement input -->
 										<h5 class="card-title">Age at Retirement</h5>
-											<input id="age_at_retirement" name="age_at_retirement" type="number" min="1" step="1" pattern="^[-\d]\d*$" class="form-control font-weight-light" placeholder="Age (must be a whole number)"><br>
+											<input id="age_at_retirement" name="age_at_retirement" type="number" min="65" max="100" step="1" required="required" class="form-control font-weight-light" placeholder="Age (must be a whole number)"><br>
 				    					<!-- age at retirement input -->
 
 				    					<!-- radio buttons (marital status) -->
@@ -96,21 +96,21 @@
 
 										<div class="border p-3 rounded">
 											<div class="custom-control custom-radio mb-2">
-												<input type="radio" min="1" step="1" class="custom-control-input" name="marital_radio" id="Single" checked="">
+												<input type="radio" class="custom-control-input" name="marital_radio" id="Single" checked="">
 												<label class="custom-control-label" for="Single">Single</label>
 											</div>
 
 											<div class="custom-control custom-radio mb-3">
-												<input type="radio" min="1" step="1" class="custom-control-input" name="marital_radio" id="Married">
+												<input type="radio" class="custom-control-input" name="marital_radio" id="Married">
 												<label class="custom-control-label" for="Married">Married</label>
 											</div>
 										</div><br>
 										<!-- /radio buttons -->
 
 										<!-- age at retirement input -->
-										<div id="married_menu">
+										<div id="married_menu" style="display: none;">
 										<h5  class="card-title">Spouse's Age at Retirement</h5>
-											<input id="spouse_age_at_retirement" name="spouse_age_at_retirement" type="number" pattern="^[-\d]\d*$" min="1" step="1" class="form-control font-weight-light" placeholder="Spouse's Age (must be a whole number)"><br>
+											<input id="spouse_age_at_retirement" name="spouse_age_at_retirement" type="number" pattern="^[-\d]\d*$" min="18" max="100"  step="1" class="form-control font-weight-light" placeholder="Spouse's Age (must be a whole number)" ><br>
 
 										<!-- /age at retirement input -->	
 
@@ -140,7 +140,7 @@
 											</div>
 										</div>
 									</div>
-								<input type="submit">
+								<input class="btn btn-primary" type="submit">
 
 							</form> 
 						</div>
@@ -159,7 +159,10 @@
 	<script src="only_whole_numbers.js"></script>
 	<!-- /input validation -->
 
+	<!-- show married options on click -->
 	<script src="show_married_options_on_radio_click.js"></script>
+	<!-- /show married options on click -->
+
 
 
 

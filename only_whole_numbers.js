@@ -1,20 +1,20 @@
 //don't allow the user to enter anything other than a whole number
 		{
 		const
-		intRx = /\d/,
+		intRx = /(0|[1-9][0-9]*)/,
 		integerChange = (event) => {
 			$("#status_area").text("");
 
 			if (
 			(event.key.length > 1) ||
-			( (event.key == "-") && (!event.currentTarget.value.length) ) ||
+			( (event.key === "") && (!event.currentTarget.value.length) ) ||
 			intRx.test(event.key)
-			) return; 
+			) return;
 			let target = event.currentTarget.id;
 			$("#"+String(target)).fadeTo(100, 0.3, function() { $(this).fadeTo(500, 1.0); });
 			event.preventDefault();
 			$("#status_area").text("You must input a whole number");
-			$("#status_area").css('color', 'red');
+			$("#status_area").css('color', '#FF3D33');
 		};
 		for (let input of document.querySelectorAll(
 		'input[type="number"][step="1"]'
